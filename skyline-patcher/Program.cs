@@ -25,7 +25,7 @@ namespace skyline_patcher
             string basePath = (string)oculusKey.GetValue("Base");
             Console.WriteLine(oculusKey.Name + "\\base" + " --> " + (basePath ?? "null"));
             if (basePath == null)
-                basePath = @"C:\Program Files\Oculus\sus"; // default base value
+                basePath = @"C:\Program Files\Oculus\"; // default base value
             string clientPath = Path.Combine(basePath, "Support", "oculus-client");
             string asarPath = Path.Combine(clientPath, "resources", "app.asar");
             if (!File.Exists(asarPath))
